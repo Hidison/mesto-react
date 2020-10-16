@@ -1,5 +1,4 @@
 import React from 'react';
-import api from "../utils/Api";
 import Card from "./Card.js";
 import { CurrentUserContext } from '../contexts/CurrentUserContext'
 
@@ -27,6 +26,7 @@ function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick, cards, onC
                         onCardClick={onCardClick}
                         onCardLike={onCardLike}
                         onCardDelete={onCardDelete}
+                        key={card._id}
                     />
                 )}
             </section>

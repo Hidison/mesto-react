@@ -81,13 +81,19 @@ function App() {
 		if (!isLiked) {
 			api.likeCard(card._id, !isLiked).then((newCard) => {
 				const newCards = cards.map((c) => c._id === card._id ? newCard : c);
-				setCards(newCards);
-			});
+				setCards(newCards)
+			})
+				.catch((err) => {
+					console.log(err);
+				})
 		} else {
 			api.removelikeCard(card._id, isLiked).then((newCard) => {
 				const newCards = cards.map((c) => c._id === card._id ? newCard : c);
-				setCards(newCards);
-			});
+				setCards(newCards)
+			})
+				.catch((err) => {
+					console.log(err);
+				})
 		}
 	}
 

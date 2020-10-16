@@ -40,9 +40,9 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
             onClose={onClose}
             onSubmit={handleSubmit}
         >
-            <input type="text" name="name" value={name} onChange={handleChangeName} className="popup__form-text popup__form-text_type_name" id='name-input' minlength="2" maxlength="40" autocomplete="off" required />
+            <input type="text" name="name" value={name || ''} onChange={handleChangeName} className="popup__form-text popup__form-text_type_name" id='name-input' minLength="2" maxLength="40" autoComplete="off" required />
             <span className='popup__form-text-error' id='name-input-error'></span>
-            <input type="text" name="job" value={description} onChange={handleChangeDescription} className="popup__form-text popup__form-text_type_job" id='job-input' minlength="2" maxlength="200" autocomplete="off" required />
+            <input type="text" name="job" value={description || ''} onChange={handleChangeDescription} className="popup__form-text popup__form-text_type_job" id='job-input' minLength="2" maxLength="200" autoComplete="off" required />
             <span className='popup__form-text-error' id='job-input-error'></span>
             <input type="submit" value="Сохранить" className="popup__form-submit" />
         </PopupWithForm>

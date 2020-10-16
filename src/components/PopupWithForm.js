@@ -7,7 +7,7 @@ function PopupWithForm(props) {
             <div className={`popup__container popup__container_type_${props.name}`}>
                 <button type="button" className="popup__close-button" onClick={props.onClose}></button>
                 <h3 className="popup__title">{props.title}</h3>
-                <form className="popup__form" name={props.name} onSubmit={props.onSubmit} novalidate>
+                <form className="popup__form" name={props.name} onSubmit={props.onSubmit} noValidate>
                     <fieldset className="popup__form-set">
                         {props.children}
                     </fieldset>

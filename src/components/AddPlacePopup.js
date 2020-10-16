@@ -32,9 +32,9 @@ function AddPlacePopup({ isOpen, onClose, onAddPlace }) {
             onClose={onClose}
             onSubmit={handleSubmit}
         >
-            <input type="text" name="title" placeholder="Название" onChange={handleChangeimageName} className="popup__form-text popup__form-text_type_title" id='title-input' minlength="1" maxlength="30" autocomplete="off" required />
+            <input type="text" name="title" placeholder="Название" onChange={handleChangeimageName} className="popup__form-text popup__form-text_type_title" id='title-input' minLength="1" maxLength="30" autoComplete="off" required />
             <span className='popup__form-text-error' id='title-input-error'></span>
-            <input type="url" name="link" placeholder="Ссылка на картинку" onChange={handleChangeimageLink} className="popup__form-text popup__form-text_type_link" id='url-input' autocomplete="off" required />
+            <input type="url" name="link" placeholder="Ссылка на картинку" onChange={handleChangeimageLink} className="popup__form-text popup__form-text_type_link" id='url-input' autoComplete="off" required />
             <span className='popup__form-text-error' id='url-input-error'></span>
             <input type="submit" value="Создать" className="popup__form-submit popup__form-submit_type_add-card" />
         </PopupWithForm>
